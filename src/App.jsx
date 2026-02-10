@@ -1,7 +1,12 @@
+import { Routes, Route } from "react-router"
+import Discover from "./pages/Discover"
+
 function App() {
   return (
     <>
-      <h1>Hello!</h1>
+    <Routes>
+      <Route path="/" element={<Discover />} />
+    </Routes>
     </>
   )
 }

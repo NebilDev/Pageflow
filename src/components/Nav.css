@@ -1,0 +1,32 @@
+.nav {
+  background-color: var(--clr-cards);
+}
+.nav > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  color: var(--clr-primary);
+  font-weight: var(--weight-bold);
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+}
+.logo-highlight {
+  color: var(--clr-accent);
+}
+.nav-items-list {
+  display: flex;
+  gap: var(--space-8);
+}
+.nav-item a {
+  display: inline-block;
+  padding-inline: var(--space-1);
+  padding-block: var(--space-3);
+  color: var(--clr-secondary);
+  font-size: var(--font-sm);
+}
+.nav-item a.active {
+    border-bottom: 3px solid var(--clr-accent);
+    color: var(--clr-accent);
+}

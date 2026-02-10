@@ -1,17 +1,28 @@
 :root {
   /* colors */
-  --clr-bg: #f5f5f4;
+  --clr-bg: #f0f1f5;
   --clr-cards: #ffffff;
-  --clr-primary: #1c1917;
+  --clr-primary: #050a17;
   --clr-secondary: #78716c;
-  --clr-accent: #4f46e5;
+  --clr-accent: #345ec1;
   --clr-success: #16a34a;
   --clr-error: #dc2626;
 
   /* typography */
   --font: "Inter", sans-serif;
-  --weight-bold: 700;
-  --weight-semibold: 600;
+
+  /* Font sizes */
+  /* --font-xs: 0.75rem; 12px – captions, meta */
+  --font-sm: 0.8rem; /* 14px – secondary text */
+  --font-base: 1rem; /* 16px – body text */
+  --font-md: 1.125rem; /* 18px – emphasized body */
+  --font-lg: 1.25rem; /* 20px – card titles */
+  --font-xl: 1.5rem; /* 24px – section headings */
+  --font-2xl: 1.875rem; /* 30px – page titles */
+  --font-3xl: 2.25rem; /* 36px – hero / main heading */
+
+  --weight-bold: 600;
+  --weight-semibold: 500;
   --weight-normal: 400;
   --weight-light: 300;
 
@@ -35,4 +46,29 @@
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--clr-bg);
+  margin: 0;
+  font-family: var(--font);
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  list-style: none;
 }
