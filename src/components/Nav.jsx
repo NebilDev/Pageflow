@@ -5,9 +5,9 @@ function Nav() {
   return (
     <nav className="nav">
       <div className="container">
-        <a href="" className="logo">
+        <NavLink to="/" className="logo">
           Page<span className="logo-highlight">flow</span>
-        </a>
+        </NavLink>
         <ul className="nav-items-list">
           <li className="nav-item">
             <NavLink to="/">Discover</NavLink>

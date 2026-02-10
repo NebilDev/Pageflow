@@ -1,5 +1,6 @@
 .nav {
   background-color: var(--clr-cards);
+  box-shadow: var(--shadow-md);
 }
 .nav > .container {
   display: flex;
