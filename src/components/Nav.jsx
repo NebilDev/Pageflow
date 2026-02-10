@@ -10,7 +10,7 @@ function Nav() {
         </NavLink>
         <ul className="nav-items-list">
           <li className="nav-item">
-            <NavLink to="/">Discover</NavLink>
+            <NavLink to="/discover">Discover</NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/library">Library</NavLink>

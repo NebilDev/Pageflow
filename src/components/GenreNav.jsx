@@ -1,0 +1,57 @@
+import { useState } from "react";
+import "./GenreNav.css";
+function GenreNav() {
+  const [genre, setGenre] = useState("fiction");
+
+  const changeGenre = (event) => {
+    setGenre(event.target.innerHTML);
+  };
+  return (
+    <div className="container">
+      <ul className="genre-items-list">
+        <li className="genre-item">
+          <button
+            onClick={changeGenre}
+            className={`genre-btn ${genre === "fiction" && "active"}`}
+          >
+            fiction
+          </button>
+        </li>
+        <li className="genre-item">
+          <button
+            onClick={changeGenre}
+            className={`genre-btn ${genre === "self-help" && "active"}`}
+          >
+            self-help
+          </button>
+        </li>
+        <li className="genre-item">
+          <button
+            onClick={changeGenre}
+            className={`genre-btn ${genre === "business" && "active"}`}
+          >
+            business
+          </button>
+        </li>
+        <li className="genre-item">
+          <button
+            onClick={changeGenre}
+            className={`genre-btn ${genre === "psychology" && "active"}`}
+          >
+            psychology
+          </button>
+        </li>
+        <li className="genre-item">
+          <button
+            onClick={changeGenre}
+            className={`genre-btn ${genre === "biography" && "active"}`}
+          >
+            biography
+          </button>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+export default GenreNav;

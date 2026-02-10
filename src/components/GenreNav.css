@@ -1,0 +1,22 @@
+.genre-items-list {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+  gap: var(--space-5);
+}
+.genre-btn {
+  border: 0;
+  color: var(--clr-secondary);
+  font-size: var(--font-base);
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: all .1s ease;
+  padding: var(--space-2);
+}
+.genre-btn:hover, .genre-btn:focus {
+    color: var(--clr-accent);
+}
+.genre-btn.active {
+  border-bottom: 3px solid var(--clr-accent);
+  color: var(--clr-accent);
+}

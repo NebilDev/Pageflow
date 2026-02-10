@@ -3,8 +3,8 @@
   justify-content: center;
 }
 .search-input {
-    width: 85%;
-    max-width: 650px;
+  width: 85%;
+  max-width: 650px;
   color: var(--clr-secondary);
   font-size: var(--font-base);
   padding: var(--space-3);
