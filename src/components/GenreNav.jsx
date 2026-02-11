@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./GenreNav.css";
-function GenreNav() {
-  const [genre, setGenre] = useState("fiction");
+function GenreNav({genre, setGenre}) {
 
   const changeGenre = (event) => {
     setGenre(event.target.innerHTML);

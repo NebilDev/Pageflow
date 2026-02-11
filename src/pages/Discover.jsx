@@ -1,14 +1,16 @@
 import Nav from "../components/Nav"
 import SearchForm from "../components/SearchForm"
-import "./Discover.css"
 import GenreNav from "../components/GenreNav"
-function Discover() {
+import BooksGrid from "./BooksGrid"
+import "./Discover.css"
+function Discover({genre, setGenre, books}) {
   return (
     <>
     <Nav />
     <h1 className="title">Discover Your Next Great Book</h1>
     <SearchForm />
-    <GenreNav />
+    <GenreNav genre={genre} setGenre={setGenre}/>
+    <BooksGrid books={books}/>
     </>
   )
 }
