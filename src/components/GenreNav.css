@@ -1,22 +1,27 @@
 .genre-items-list {
   display: flex;
   justify-content: center;
-  margin-top: var(--space-8);
-  gap: var(--space-5);
+  margin-top: var(--space-6);
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
 }
 .genre-btn {
-  border: 0;
   color: var(--clr-secondary);
-  font-size: var(--font-base);
+  background-color: transparent;
+  font-size: 14px;
+  padding: var(--space-2) var(--space-4);
   text-transform: capitalize;
+  border: 1px solid var(--clr-border);
+  border-radius: 8px;
   cursor: pointer;
-  transition: all .1s ease;
-  padding: var(--space-2);
+  transition: all 0.15s ease;
 }
-.genre-btn:hover, .genre-btn:focus {
-    color: var(--clr-accent);
+.genre-btn:hover,
+.genre-btn:focus {
+  color: var(--clr-primary);
 }
 .genre-btn.active {
-  border-bottom: 3px solid var(--clr-accent);
-  color: var(--clr-accent);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--clr-primary);
 }

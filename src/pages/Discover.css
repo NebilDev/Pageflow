@@ -1,5 +1,8 @@
 .title {
-    text-align: center;
-    font-size: var(--font-xl);
-    margin-top: var(--space-12);
+  text-align: center;
+  font-size: var(--font-xl);
+  margin-top: var(--space-12);
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.3px;
+  margin-bottom: var(--space-6);
 }

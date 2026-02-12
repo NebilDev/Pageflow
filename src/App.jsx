@@ -10,8 +10,9 @@ function App() {
   useEffect(() => {
     const fetchBooks = async () => {
       const res = await axios.get(
-        `https://openlibrary.org/search.json?subject=${genre}&limit=20
-`);
+        `https://openlibrary.org/search.json?subject=${genre}&limit=21
+`,
+      );
       setBooks(res.data.docs);
     };
 

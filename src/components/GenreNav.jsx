@@ -14,7 +14,7 @@ function GenreNav({genre, setGenre}) {
           >
             fiction
           </button>
-        </li>
+        </li> 
         <li className="genre-item">
           <button
             onClick={changeGenre}

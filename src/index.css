@@ -1,10 +1,12 @@
 :root {
   /* colors */
-  --clr-bg: #f0f1f5;
-  --clr-cards: #ffffff;
-  --clr-primary: #050a17;
-  --clr-secondary: #78716c;
-  --clr-accent: #345ec1;
+  --clr-bg: #0f172a; /* main background */
+  --clr-cards: #111827; /* card background */
+  --clr-border: #1f2937; /* subtle borders */
+  --clr-primary: #f3f4f6;
+  --clr-secondary: #9ca3af;
+  --clr-accent: #6366f1; /* controlled violet */
+  --clr-accent-hover: #4f46e5;
   --clr-success: #16a34a;
   --clr-error: #dc2626;
 
@@ -12,12 +14,12 @@
   --font: "Inter", sans-serif;
 
   /* Font sizes */
-  /* --font-xs: 0.75rem; 12px – captions, meta */
+  --font-xs: 0.75rem; /*12px – captions, meta*/
   --font-sm: 0.8rem; /* 14px – secondary text */
   --font-base: 1rem; /* 16px – body text */
   --font-md: 1.125rem; /* 18px – emphasized body */
   --font-lg: 1.25rem; /* 20px – card titles */
-  --font-xl: 1.5rem; /* 24px – section headings */
+  --font-xl: 1.75rem; /* 24px – section headings */
   --font-2xl: 1.875rem; /* 30px – page titles */
   --font-3xl: 2.25rem; /* 36px – hero / main heading */
 
@@ -50,12 +52,14 @@
 
 * {
   box-sizing: border-box;
+  transition: all 0.15s ease;
 }
 
 body {
   background-color: var(--clr-bg);
   margin: 0;
   font-family: var(--font);
+  color: var(--clr-primary);
 }
 .container {
   width: 90%;
@@ -71,4 +75,11 @@ a {
 ul {
   margin: 0;
   list-style: none;
+}
+img {
+  max-width: 100%;
+}
+/* utility classes */
+.bold-txt {
+  font-weight: var(--weight-bold);
 }

@@ -1,3 +1,60 @@
-.book-thumbnail {
-    width: 150px;
+.books-container {
+  padding: var(--space-8);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 0.6fr));
+  gap: var(--space-6) var(--space-3);
+  justify-content: center;
+}
+.book-card {
+  background-color: var(--clr-cards);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  border: 1px solid var(--clr-border);
+  transition: all 0.15s ease;
+}
+.book-card:hover {
+  transform: translateY(-3px);
+  border-color: #2a3647;
+}
+
+.book-img-container {
+  text-align: center;
+}
+.book-img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 14px;
+}
+.book-title {
+  font-weight: var(--weight-bold);
+  font-size: var(--font-base);
+  margin-bottom: var(--space-2);
+}
+.book-author {
+  font-size: var(--font-sm);
+  margin-bottom: var(--space-1);
+}
+.book-date {
+  font-size: var(--font-xs);
+  margin-bottom: var(--space-4);
+  color: var(--clr-secondary);
+}
+.add-to-read {
+  width: 100%;
+  background-color: var(--clr-accent);
+  color: var(--clr-primary);
+  font-size: var(--font-sm);
+  font-weight: var(--weight-bold);
+  border: none;
+  padding-block: var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.add-to-read:hover,
+.add-to-read:focus {
+  background-color: var(--clr-accent-hover);
 }
