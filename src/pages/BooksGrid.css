@@ -58,3 +58,12 @@
 .add-to-read:focus {
   background-color: var(--clr-accent-hover);
 }
+
+/* for book card component */
+.loading-container {
+  text-align: center;
+  margin-top: var(--space-10);
+}
+.loading {
+  width: 70px;
+}
