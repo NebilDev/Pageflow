@@ -25,7 +25,7 @@ function App() {
         <Route index element={<Navigate to="/discover" replace />} />
         <Route
           path="/discover"
-          element={<Discover genre={genre} setGenre={setGenre} books={books} />}
+          element={<Discover genre={genre} setGenre={setGenre} books={books} setBooks={setBooks} />}
         />
       </Routes>
     </>
