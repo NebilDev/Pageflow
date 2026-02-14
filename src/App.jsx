@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router";
 import Discover from "./pages/discover/Discover";
+import Library from "./pages/library/Library";
 import axios from "axios";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             />
           }
         />
+        <Route path="/library" element={<Library />} />
       </Routes>
     </>
   );
