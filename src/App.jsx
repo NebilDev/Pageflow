@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Routes, Route, Navigate } from "react-router";
-import Discover from "./pages/Discover";
+import Discover from "./pages/discover/Discover";
 import axios from "axios";
 
 function App() {

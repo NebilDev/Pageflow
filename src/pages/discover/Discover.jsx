@@ -1,6 +1,6 @@
-import Nav from "../components/Nav";
-import SearchForm from "../components/SearchForm";
-import GenreNav from "../components/GenreNav";
+import Nav from "../../components/Nav";
+import SearchForm from "../../components/SearchForm";
+import GenreNav from "../../components/GenreNav";
 import BooksGrid from "./BooksGrid";
 import "./Discover.css";
 function Discover({ genre, setGenre, books, setBooks }) {

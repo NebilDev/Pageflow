@@ -1,9 +1,10 @@
-import BookCard from "../components/BookCard";
-import loadingSpinner from "../assets/loading-spinner.gif";
+import BookCard from "../../components/BookCard";
+import loadingSpinner from "../../assets/loading-spinner.gif";
 import "./BooksGrid.css";
 
 function BooksGrid({ books }) {
-  return books.length > 0 ? (
+  // add books && for invalid searched
+  return books && books.length > 0 ? (
     <div className="container">
       <div className="books-container">
         <BookCard books={books} />
