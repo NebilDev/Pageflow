@@ -1,8 +1,9 @@
 import "./GenreNav.css";
-function GenreNav({genre, setGenre}) {
+function GenreNav({genre, setGenre, setBooks}) {
 
   const changeGenre = (event) => {
     setGenre(event.target.innerHTML);
+    setBooks([]);
   };
   return (
     <div className="container">

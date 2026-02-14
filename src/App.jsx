@@ -10,10 +10,9 @@ function App() {
   useEffect(() => {
     const fetchBooks = async () => {
       const res = await axios.get(
-        `https://openlibrary.org/search.json?subject=${genre}&limit=21
-`,
+        `https://www.googleapis.com/books/v1/volumes?q=${genre}&maxResults=20&printType=books&langRestrict=en&orderBy=relevance&key=AIzaSyC0xLO4xHC06V9GPSHE1yu-IT_2pA0Zi7U`,
       );
-      setBooks(res.data.docs);
+      setBooks(res.data.items);
     };
 
     fetchBooks();
@@ -25,7 +24,14 @@ function App() {
         <Route index element={<Navigate to="/discover" replace />} />
         <Route
           path="/discover"
-          element={<Discover genre={genre} setGenre={setGenre} books={books} setBooks={setBooks} />}
+          element={
+            <Discover
+              genre={genre}
+              setGenre={setGenre}
+              books={books}
+              setBooks={setBooks}
+            />
+          }
         />
       </Routes>
     </>

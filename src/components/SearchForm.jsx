@@ -1,22 +1,18 @@
 import { useState, useRef } from "react";
 import "./SearchForm.css";
-function SearchForm({ genre, setGenre, setBooks }) {
+function SearchForm({ setGenre, setBooks }) {
   const [searchValue, setSearchValue] = useState("");
-  const ref = useRef();
+  const inputRef = useRef(null);
   const getSearchValue = () => {
     setSearchValue(event.target.value);
   };
   const searchBook = () => {
-    console.log(ref)
-    if(ref.value) {
+    if (inputRef.current.value) {
       if (event.key === "Enter") {
-        setGenre(ref.value);
-        setBooks([])
-        console.log(ref.value)
-      }
-    } else {
-      if(genre !== "fiction") {
-        setGenre("fiction")
+        const searchWord = inputRef.current.value.replaceAll(" ", "+");
+        setGenre(searchWord);
+        setBooks([]);
+        console.log(inputRef.current.value);
       }
     }
   };
@@ -29,7 +25,7 @@ function SearchForm({ genre, setGenre, setBooks }) {
         onChange={getSearchValue}
         onKeyDown={searchBook}
         value={searchValue}
-        ref={ref}
+        ref={inputRef}
       />
     </div>
   );
