@@ -54,9 +54,17 @@
   cursor: pointer;
   transition: all 0.15s ease;
 }
+
 .add-to-read:hover,
 .add-to-read:focus {
   background-color: var(--clr-accent-hover);
+}
+/* styling for added button */
+.add-to-read:disabled {
+  background: #1f2937; /* muted dark */
+  color: #6b7280; /* soft gray */
+  border: 1px solid #374151;
+  cursor: not-allowed;
 }
 
 /* for book card component */
