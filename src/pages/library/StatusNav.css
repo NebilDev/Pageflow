@@ -1,0 +1,27 @@
+.status-items-list {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-6);
+  gap: var(--space-3);
+  margin-block: var(--space-10);
+}
+.status-btn {
+  color: var(--clr-secondary);
+  background-color: transparent;
+  font-size: 14px;
+  padding: var(--space-2) var(--space-4);
+  text-transform: capitalize;
+  border: 1px solid var(--clr-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.status-btn:hover,
+.status-btn:focus {
+  color: var(--clr-primary);
+}
+.status-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--clr-primary);
+}
