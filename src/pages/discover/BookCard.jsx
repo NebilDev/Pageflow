@@ -13,10 +13,9 @@ function BookCard({ book, toRead, setToRead }) {
       },
     ];
     setToRead(updated);
-    localStorage.setItem("readingList", JSON.stringify(updated));
+    localStorage.setItem("toRead", JSON.stringify(updated));
   };
-  const isAdded =
-    toRead && toRead.some((item) => item.id === book.id);
+  const isAdded = toRead.some(item => item.id === book.id);
   return (
     <div className="book-card">
       <div className="book-img-container">

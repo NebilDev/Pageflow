@@ -1,9 +1,12 @@
-import Nav from "../../components/Nav"
-import "./Library.css"
+import Nav from "../../components/Nav";
+import "./Library.css";
 function Library() {
   return (
-    <Nav />
-  )
+    <>
+      <Nav />
+      <StatusNav />
+    </>
+  );
 }
 
-export default Library
+export default Library;
