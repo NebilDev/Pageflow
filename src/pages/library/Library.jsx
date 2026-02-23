@@ -1,17 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Nav from "../../components/Nav";
 import "./Library.css";
 import StatusNav from "./StatusNav";
-function Library() {
+function Library({ library, setLibrary }) {
   const [status, setStatus] = useState("reading");
-  // const [savedBook, setSavedBooks] = useState([]); will be used to save the retreived books
-  useEffect(() => {}, [status]);
+  const filteredBooks = library.filter(
+  book => book.status === status
+);
   return (
-    // thinking to whenver status changes we retrieve different book the issue they have differennt buttons
-    // currently thinking to use different buttons based on if condition
     <>
       <Nav />
       <StatusNav status={status} setStatus={setStatus} />
+      <LibraryBooks books={filteredBooks} setLibrary={setLibrary}/>
     </>
   );
 }

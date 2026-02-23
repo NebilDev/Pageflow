@@ -1,13 +1,9 @@
-import { useState } from "react";
 import BookCard from "./BookCard";
 import loadingSpinner from "../../assets/loading-spinner.gif";
 import "./BooksGrid.css";
 
-function BooksGrid({ books }) {
-  const [toRead, setToRead] = useState(() => {
-    const stored = localStorage.getItem("toRead");
-    return stored ? JSON.parse(stored) : [];
-  });
+function BooksGrid({ books, library, setLibrary}) {
+
   // add books && for invalid searched
   return books && books.length > 0 ? (
     <div className="container">
@@ -16,8 +12,8 @@ function BooksGrid({ books }) {
           <BookCard
             key={book.id}
             book={book}
-            toRead={toRead}
-            setToRead={setToRead}
+            library={library}
+            setLibrary={setLibrary}
           />
         ))}
       </div>

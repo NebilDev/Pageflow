@@ -1,21 +1,22 @@
-function BookCard({ book, toRead, setToRead }) {
+function BookCard({ book, library, setLibrary }) {
   const addToRead = (book) => {
-    const alreadyExists = toRead.find((item) => item.id === book.id);
+    const alreadyExists = library.find((item) => item.id === book.id);
     if (alreadyExists) return;
     const updated = [
-      ...toRead,
+      ...library,
       {
         id: book.id,
         title: book.volumeInfo.title,
         author: book.volumeInfo.authors,
         image: book.volumeInfo.imageLinks?.thumbnail,
         date: book.volumeInfo.publishedDate,
+        status: "to read"
       },
     ];
-    setToRead(updated);
-    localStorage.setItem("toRead", JSON.stringify(updated));
+    setLibrary(updated);
+    localStorage.setItem("library", JSON.stringify(updated));
   };
-  const isAdded = toRead.some(item => item.id === book.id);
+  const isAdded = library.some(item => item.id === book.id);
   return (
     <div className="book-card">
       <div className="book-img-container">

@@ -7,6 +7,10 @@ import axios from "axios";
 function App() {
   const [books, setBooks] = useState([]);
   const [genre, setGenre] = useState("fiction");
+  const [library, setLibrary] = useState(() => {
+    const stored = localStorage.getItem("library");
+    return stored ? JSON.parse(stored) : [];
+  });
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -31,10 +35,15 @@ function App() {
               setGenre={setGenre}
               books={books}
               setBooks={setBooks}
+              library={library}
+              setLibrary={setLibrary}
             />
           }
         />
-        <Route path="/library" element={<Library />} />
+        <Route
+          path="/library"
+          element={<Library library={library} setLibrary={setLibrary} />}
+        />
       </Routes>
     </>
   );
