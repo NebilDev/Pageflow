@@ -22,7 +22,7 @@ function App() {
     };
 
     fetchBooks();
-  }, [genre]);
+  }, [genre, apiKey]);
 
   return (
     <>
