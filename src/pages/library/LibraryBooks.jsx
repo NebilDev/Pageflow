@@ -1,6 +1,6 @@
 import LibraryBook from "./LibraryBook";
 import loadingSpinner from "../../assets/loading-spinner.gif";
-// import "./LibraryBooks.css";
+import "./LibraryBooks.css";
 
 function LibraryBooks({ books, library, setLibrary}) {
 

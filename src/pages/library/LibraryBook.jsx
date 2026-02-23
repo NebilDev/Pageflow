@@ -18,28 +18,28 @@ function LibraryBook({ book, library, setLibrary }) {
       <div className="book-img-container">
         <img
           className="book-img"
-          src={book.volumeInfo.imageLinks?.thumbnail}
+          src={book.image}
           alt="Book Cover Page"
         />
       </div>
       <div className="book-details">
-        <p className="book-title">{book.volumeInfo.title}</p>
-        <p className="book-author">{book.volumeInfo.authors}</p>
-        <p className="book-date">Date: {book.volumeInfo.publishedDate}</p>
-        {book.status === "to-read" && (
-          <button onClick={() => updateStatus(book.id, "reading")}>
+        <p className="book-title">{book.title}</p>
+        <p className="book-author">{book.authors}</p>
+        <p className="book-date">Date: {book.date}</p>
+        {book.status === "to read" && (
+          <button className="btn start-reading" onClick={() => updateStatus(book.id, "reading")}>
             Start Reading
           </button>
         )}
 
         {book.status === "reading" && (
-          <button onClick={() => updateStatus(book.id, "have-read")}>
+          <button className="btn done-reading" onClick={() => updateStatus(book.id, "have read")}>
             Mark as Read
           </button>
         )}
 
-        {book.status === "have-read" && (
-          <button onClick={() => removeBook(book.id)}>Remove</button>
+        {book.status === "have read" && (
+          <button className="btn remove" onClick={() => removeBook(book.id)}>Remove</button>
         )}
       </div>
     </div>

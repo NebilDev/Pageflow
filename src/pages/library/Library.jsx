@@ -10,7 +10,7 @@ function Library({ library, setLibrary }) {
     <>
       <Nav />
       <StatusNav status={status} setStatus={setStatus} />
-      <LibraryBooks books={filteredBooks} setLibrary={setLibrary} />
+      <LibraryBooks books={filteredBooks} library={library} setLibrary={setLibrary} />
     </>
   );
 }
