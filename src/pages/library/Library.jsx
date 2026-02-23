@@ -1,7 +1,6 @@
 import { useState } from "react";
 import LibraryBooks from "./LibraryBooks";
 import Nav from "../../components/Nav";
-import "./Library.css";
 import StatusNav from "./StatusNav";
 function Library({ library, setLibrary }) {
   const [status, setStatus] = useState("reading");

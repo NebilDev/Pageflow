@@ -5,6 +5,7 @@ import Library from "./pages/library/Library";
 import axios from "axios";
 
 function App() {
+  const apiKey = import.meta.env.VITE_API_KEY;
   const [books, setBooks] = useState([]);
   const [genre, setGenre] = useState("fiction");
   const [library, setLibrary] = useState(() => {
@@ -15,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchBooks = async () => {
       const res = await axios.get(
-        `https://www.googleapis.com/books/v1/volumes?q=${genre}&maxResults=20&printType=books&langRestrict=en&orderBy=relevance&key=AIzaSyC0xLO4xHC06V9GPSHE1yu-IT_2pA0Zi7U`,
+        `https://www.googleapis.com/books/v1/volumes?q=${genre}&maxResults=20&printType=books&langRestrict=en&orderBy=relevance&key=${apiKey}`,
       );
       setBooks(res.data.items);
     };
