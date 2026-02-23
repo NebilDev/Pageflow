@@ -1,7 +1,5 @@
-import { useState } from "react";
 import "./StatusNav.css";
-function StatusNav() {
-    const [status, setStatus] = useState('reading')
+function StatusNav({status, setStatus}) {
   const changeStatus = (event) => {
     setStatus(event.target.innerHTML);
   };
