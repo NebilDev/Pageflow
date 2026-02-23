@@ -66,11 +66,13 @@
   opacity: .8;
 }
 
-/* for book card component */
-.loading-container {
-  text-align: center;
-  margin-top: var(--space-10);
+/* for empty library */
+.empty-library {
+  display: flex;
+  justify-content: center;
+  margin-block: var(--space-12);
 }
-.loading {
-  width: 70px;
+.no-books {
+  font-size: var(--font-lg);
+  color: var(--clr-secondary);
 }

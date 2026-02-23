@@ -1,9 +1,7 @@
 import LibraryBook from "./LibraryBook";
-import loadingSpinner from "../../assets/loading-spinner.gif";
 import "./LibraryBooks.css";
 
-function LibraryBooks({ books, library, setLibrary}) {
-
+function LibraryBooks({ books, library, setLibrary }) {
   // add books && for invalid searched
   return books && books.length > 0 ? (
     <div className="container">
@@ -19,8 +17,11 @@ function LibraryBooks({ books, library, setLibrary}) {
       </div>
     </div>
   ) : (
-    <div className="container loading-container">
-      <img src={loadingSpinner} className="loading" />
+    <div className="container empty-library">
+      <p className="no-books">
+        You haven’t added any books yet. Head to Discover and add your first
+        one.
+      </p>
     </div>
   );
 }
