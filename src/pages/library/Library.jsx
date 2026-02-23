@@ -1,17 +1,16 @@
 import { useState } from "react";
+import LibraryBooks from "./LibraryBooks";
 import Nav from "../../components/Nav";
 import "./Library.css";
 import StatusNav from "./StatusNav";
 function Library({ library, setLibrary }) {
   const [status, setStatus] = useState("reading");
-  const filteredBooks = library.filter(
-  book => book.status === status
-);
+  const filteredBooks = library.filter((book) => book.status === status);
   return (
     <>
       <Nav />
       <StatusNav status={status} setStatus={setStatus} />
-      <LibraryBooks books={filteredBooks} setLibrary={setLibrary}/>
+      <LibraryBooks books={filteredBooks} setLibrary={setLibrary} />
     </>
   );
 }
