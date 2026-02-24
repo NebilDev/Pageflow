@@ -34,7 +34,7 @@ The app is **mobile-first**, responsive, and stores all data locally using `loca
 ## 🖼 Screenshots
 
 ![Website preview]
-![Book Library App Screenshot](./preview1.png)
+![Book Library App Screenshot](assets/preview1.png)
 
 *(Replace placeholders with actual screenshots)*
 
