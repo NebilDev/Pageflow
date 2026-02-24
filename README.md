@@ -1,7 +1,7 @@
 # Pageflow
 
 A **personal reading workflow manager** built with React.  
-Track your books, monitor reading progress in percentages, and add personal notes — all in a **clean, mobile-first interface**.
+Track your books, monitor reading progress, add book to your to read list, all in a **clean, mobile-first interface**.
 
 ---
 
@@ -31,18 +31,12 @@ The app is **mobile-first**, responsive, and stores all data locally using `loca
 
 ---
 
-<!-- ## 🖼 Screenshots
+## 🖼 Screenshots
 
-**Desktop Home / Discover Page:**  
-![Desktop Home](./assets/screenshots/home-desktop.png)
+![Website preview]
+![Book Library App Screenshot](./preview1.png)
 
-**Mobile Home / Discover Page:**  
-![Mobile Home](./assets/screenshots/home-mobile.png)
-
-**Library Page (Tabs: To Read / Reading / Read):**  
-![Library Page](./assets/screenshots/library-desktop.png)
-
-*(Replace placeholders with actual screenshots)* -->
+*(Replace placeholders with actual screenshots)*
 
 ---
 
@@ -52,7 +46,7 @@ The app is **mobile-first**, responsive, and stores all data locally using `loca
 - **JavaScript (ES6)** – Core scripting language  
 - **CSS (Custom)** – Styling with modern, minimal design  
 - **localStorage** – Persist user data locally  
-- **Books API** – Fetch book data dynamically (Google Books API)  
+- **GOOGLE Books API** – Fetch book data dynamically (Google Books API)  
 
 ---
 
@@ -61,4 +55,6 @@ The app is **mobile-first**, responsive, and stores all data locally using `loca
 1. **Clone the repository**  
 ```bash
 git clone https://github.com/<your-username>/pageflow.git
-cd pageflow
+cd Pageflow
+npm i
+npm run dev
